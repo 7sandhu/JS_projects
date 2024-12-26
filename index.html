@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLOR CHANGER</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <div class="bg-lime-200 h-screen w-screen flex justify-center align-bottom body transition duration-500">
+        <div class="absolute bottom-8 w-[900px] h-28 rounded-full bg-white flex justify-center items-center gap-4 shadow-xl border-[2px] border-black">
+           
+            <div class="button h-20 w-20 rounded-full cursor-pointer border border-gray-800" id="red" style="background-color:red;"></div>
+            <div class="button h-20 w-20 rounded-full cursor-pointer border border-gray-800" id="blue" style="background-color:blue;"></div>
+            <div class="button h-20 w-20 rounded-full cursor-pointer border border-gray-800" id="green" style="background-color:green;"></div>
+            <div class="button h-20 w-20 rounded-full cursor-pointer border border-gray-800" id="violet" style="background-color:violet;"></div>
+            <div class="button h-20 w-20 rounded-full cursor-pointer border border-gray-800" id="orange" style="background-color:orange;"></div>
+            <div class="button h-20 w-20 rounded-full cursor-pointer border border-gray-800" id="indigo" style="background-color:indigo;"></div>
+            <div class="button h-20 w-20 rounded-full cursor-pointer border border-gray-800" id="gray" style="background-color:gray;"></div>
+            <div class="button h-20 w-20 rounded-full cursor-pointer border border-gray-800" id="purple" style="background-color: purple;"></div>
+        
+
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+
+    const body = document.querySelector('.body');
+    const buttons = document.querySelectorAll('.button');
+
+    buttons.forEach( button => {
+        button.addEventListener('click' ,e => {
+            body.style.backgroundColor = e.target.style.backgroundColor;
+        })
+    });
+
+
+
+</script>
+
+
+</html>
